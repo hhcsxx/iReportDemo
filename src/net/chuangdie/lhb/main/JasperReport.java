@@ -24,6 +24,8 @@ public class JasperReport
 		{
 			print = JasperFillManager.fillReport(outPath + name, hm,
 					new JRBeanCollectionDataSource(list));
+			// JasperPrintManager.printReport(print, false);//
+			// 设置为false为直接打印，true会弹出打印预览
 			JasperViewer jrview = new JasperViewer(print, false);
 			jrview.setPreferredSize(new Dimension(200, 100));
 			jrview.setVisible(true);
